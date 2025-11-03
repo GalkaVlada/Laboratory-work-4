@@ -3,7 +3,7 @@
   "title": "HumidityArtSocialDB",
   "type": "object",
   "properties": {
-    "user": {
+    "user": { 
       "type": "object",
       "properties": {
         "user_id": { "type": "string" },
