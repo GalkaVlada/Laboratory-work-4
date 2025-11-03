@@ -1,0 +1,20 @@
+name: Print Software Versions
+
+on:
+  [push, pull_request]
+
+jobs:
+  print-versions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Node.js version
+        run: node --version
+
+      - name: Print NPM version
+        run: npm --version
+
+      - name: Print Python version
+        run: python3 --version
+
+      - name: Print MongoDB version
+        run: mongosh --version
