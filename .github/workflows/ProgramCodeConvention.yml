@@ -7,7 +7,7 @@ jobs:
   lint-js:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Set up Node.js
@@ -18,5 +18,8 @@ jobs:
       - name: Install Biome
         run: npm install --global @biomejs/biome
 
-      - name: Lint ProgramCode.js
+      - name: Lint original ProgramCode.js
         run: biome check $GITHUB_WORKSPACE/ProgramCode.js
+
+      - name: Lint modified ProgramCodeModified.js
+        run: biome check $GITHUB_WORKSPACE/ProgramCodeModified.js
